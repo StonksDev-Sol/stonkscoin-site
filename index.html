@@ -1,110 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Sitio oficial del proyecto StonksCoin — comunidad de inversión, desarrollo blockchain y economía descentralizada." />
-        <title>StonksCoin | Official Site</title>
-          <style>
-              body {
-                      font-family: 'Segoe UI', Arial, sans-serif;
-                            background: #0e0e10;
-                                  color: #f4f4f4;
-                                        margin: 0;
-                                              padding: 0;
-                                                    text-align: center;
-              }
-                  header {
-                          background: linear-gradient(90deg, #6a00f4, #00e5ff);
-                                padding: 2rem 1rem;
-                  }
-                      header h1 {
-                              font-size: 2.5rem;
-                                    margin: 0;
-                                          color: white;
-                      }
-                          header p {
-                                  color: #e0e0e0;
-                                        font-size: 1.2rem;
-                          }
-                              main {
-                                      padding: 2rem 1rem;
-                                            max-width: 900px;
-                                                  margin: auto;
-                              }
-                                  .section {
-                                          margin-bottom: 2rem;
-                                  }
-                                      .btn {
-                                              background: #00e5ff;
-                                                    color: #0e0e10;
-                                                          padding: 0.8rem 1.5rem;
-                                                                border: none;
-                                                                      border-radius: 8px;
-                                                                            text-decoration: none;
-                                                                                  font-weight: bold;
-                                                                                        transition: 0.3s;
-                                      }
-                                          .btn:hover {
-                                                  background: #6a00f4;
-                                                        color: white;
-                                          }
-                                              footer {
-                                                      background: #111;
-                                                            color: #aaa;
-                                                                  padding: 1rem;
-                                                                        font-size: 0.9rem;
-                                              }
-                                                </style>
-                                                </head>
-                                                <body>
-                                                  <header>
-                                                      <h1>💎 StonksCoin</h1>
-                                                          <p>Inversión inteligente, blockchain transparente y economía descentralizada.</p>
-                                                            </header>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>La revolución del meme en Solana | The Meme Revolution on Solana — StonksCoin</title>
 
-                                                              <main>
-                                                                  <section class="section">
-                                                                        <h2>🚀 About StonksCoin</h2>
-                                                                              <p>
-                                                                                      StonksCoin is a decentralized project built for investors and creators who believe in transparency, innovation, and blockchain-based wealth.
-                                                                                            </p>
-                                                                                                  <p>
-                                                                                                          StonksCoin es una comunidad enfocada en el desarrollo blockchain, la inversión colectiva y la expansión de un modelo financiero descentralizado.
-                                                                                                                </p>
-                                                                                                                    </section>
+<meta name="description" content="StonksCoin ($STONKS) — Memes + progreso real en Solana. Camino: Poop.Fan → CoinGecko → CoinMarketCap → Binance. Únete a la #StonksCoinArmy." />
+<meta property="og:title" content="StonksCoin — La revolución del meme en Solana" />
+<meta property="og:description" content="Memes + progreso real en Solana. Camino: Poop.Fan → CoinGecko → CoinMarketCap → Binance." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://stonksdev-sol.github.io/stonkscoin-site/" />
+<!-- Si subes el logo/imagen, esta línea mostrará vista previa -->
+<meta property="og:image" content="assets/stonks-hero.jpg" />
 
-                                                                                                                        <section class="section">
-                                                                                                                              <h2>🌐 Join Our Community</h2>
-                                                                                                                                    <p>
-                                                                                                                                            Stay connected and be part of the next evolution in decentralized finance.
-                                                                                                                                                  </p>
-                                                                                                                                                        <a class="btn" href="https://t.me/StonksCoinCommunity" target="_blank">Join Telegram</a>
-                                                                                                                                                              <a class="btn" href="https://x.com/StonksCoinOficial" target="_blank">Follow on X</a>
-                                                                                                                                                                  </section>
+<style>
+:root{
+--bg:#0e0e10;
+--card:#15151a;
+--text:#f4f4f4;
+--muted:#b7b7c3;
+--accent:#f5a623; /* dorado/ámbar */
+--accent-2:#ffd56b;
+}
+*{box-sizing:border-box}
+body{
+margin:0; font-family: "Segoe UI", Arial, sans-serif;
+background: var(--bg); color: var(--text);
+}
+header{
+padding: 2.5rem 1.25rem; text-align:center;
+background: linear-gradient(180deg, rgba(245,166,35,0.12), transparent 65%);
+border-bottom: 1px solid #1f1f25;
+}
+.logo{
+width:92px; height:92px; border-radius:20px;
+background: radial-gradient(circle at 30% 30%, var(--accent-2), var(--accent));
+display:inline-flex; align-items:center; justify-content:center;
+color:#111; font-weight:800; letter-spacing:.5px; box-shadow: 0 8px 24px rgba(245,166,35,.25)
+}
+.title{
+font-size: clamp(1.6rem, 2.2vw + 1rem, 2.35rem);
+margin: 1rem 0 .25rem; font-weight:800;
+}
+.subtitle{
+margin:0; color:var(--muted); font-size: .98rem;
+}
+main{max-width:1100px; margin: 2rem auto; padding: 0 1rem;}
+.hero{
+display:grid; gap:1.2rem; align-items:center;
+grid-template-columns: 1.1fr .9fr;
+}
+.hero img{
+width:100%; border-radius:18px; display:block;
+border:1px solid #23232b; background:#0a0a0d;
+box-shadow: 0 10px 26px rgba(0,0,0,.35);
+}
+.card{
+background: var(--card); border:1px solid #23232b; border-radius:16px; padding:1.25rem;
+}
+.pill{
+display:inline-block; padding:.35rem .7rem; border-radius:999px;
+background: #1d1d22; border:1px solid #2a2a31; color:var(--muted); font-size:.8rem;
+}
+.steps{margin:.75rem 0 1rem; padding-left:1.1rem}
+.steps li{margin:.4rem 0}
+.btns{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1rem}
+.btn{
+text-decoration:none; font-weight:700; letter-spacing:.2px;
+padding:.8rem 1rem; border-radius:10px; border:1px solid #23232b;
+background:#191920; color:var(--text); display:inline-flex; align-items:center; gap:.5rem;
+transition:.2s transform, .2s filter;
+}
+.btn:hover{transform:translateY(-2px); filter:brightness(1.06)}
+.btn.primary{background: linear-gradient(90deg, var(--accent), var(--accent-2)); color:#151515; border:none}
+.grid{display:grid; gap:1rem; grid-template-columns: repeat(3, 1fr); margin-top:1.25rem}
+.footer{
+text-align:center; color:var(--muted); font-size:.85rem; padding:2rem 1rem; border-top:1px solid #1f1f25; margin-top:2.5rem
+}
+@media (max-width: 920px){
+.hero{grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">$</div>
+<h1 class="title">StonksCoin — La revolución del meme en Solana / The Meme Revolution on Solana</h1>
+<p class="subtitle">Memes + progreso real en Solana. Únete a la <b>#StonksCoinArmy</b>.</p>
+</header>
 
-                                                                                                                                                                      <section class="section">
-                                                                                                                                                                            <h2>🧠 Our Mission</h2>
-                                                                                                                                                                                  <p>
-                                                                                                                                                                                          Empower individuals through financial education, crypto innovation, and collective growth.
-                                                                                                                                                                                                </p>
-                                                                                                                                                                                                      <p>
-                                                                                                                                                                                                              Empoderar a las personas mediante educación financiera, innovación cripto y crecimiento colectivo.
-                                                                                                                                                                                                                    </p>
-                                                                                                                                                                                                                        </section>
-                                                                                                                                                                                                                          </main>
+<main>
+<section class="hero">
+<div class="card">
+<span class="pill">Roadmap público</span>
+<h2 style="margin:.6rem 0 0">De 0 a listado grande</h2>
+<ul class="steps">
+<li><b>Etapa 1:</b> Lanzamiento en Solana + comunidad (Telegram &amp; X).</li>
+<li><b>Etapa 2:</b> Listado inicial en <b>Pump.Fun</b> (visibilidad temprana).</li>
+<li><b>Etapa 3:</b> Aplicaciones a <b>CoinGecko</b> y <b>CoinMarketCap</b>.</li>
+<li><b>Etapa 4:</b> Métricas, auditorías y camino a <b>Binance</b>.</li>
+</ul>
 
-                                                                                                                                                                                                                            <footer>
-                                                                                                                                                                                                                                © 2025 StonksCoin Project | Powered by StonksDev-Sol
-                                                                                                                                                                                                                                  </footer>
-                                                                                                                                                                                                                                  </body>
-                                                                                                                                                                                                                                  </html>
-                                              }
-                                          }
-                                      }
-                                  }
-                              }
-                          }
-                      }
-                  }
-              }
+<div class="btns">
+<a class="btn primary" href="https://t.me/StonksCoinArmy" target="_blank" rel="noopener">Join Telegram</a>
+<a class="btn" href="https://x.com/StonksCoinArmy" target="_blank" rel="noopener">Follow on X</a>
+<a class="btn" href="https://www.instagram.com/stonksdev2025" target="_blank" rel="noopener">Instagram</a>
+</div>
+</div>
+
+<!-- Si subes el archivo assets/stonks-hero.jpg al repo, se mostrará aquí -->
+<img src="assets/stonks-hero.jpg" alt="StonksCoin hero" onerror="this.style.display='none'">
+</section>
+
+<section class="grid">
+<div class="card">
+<h3>$STONKS</h3>
+<p>Token meme con utilidades en comunidad, contenido y micro-recompensas. Construido en <b>Solana</b> para fees bajos y alta velocidad.</p>
+</div>
+<div class="card">
+<h3>Transparencia</h3>
+<p>Comunidad primero: actualizaciones abiertas, auditoría planeada y comunicación 24/7 en Telegram y X.</p>
+</div>
+<div class="card">
+<h3>Próximo</h3>
+<p>Contrato en Solana, formulario de CG/CMC y primeras integraciones. Mantente atento al canal.</p>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+© <span id="y"></span> StonksCoin — All rights reserved. • Built on Solana
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
