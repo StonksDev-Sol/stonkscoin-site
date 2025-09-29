@@ -2,106 +2,319 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Sitio oficial del proyecto StonksCoin — memes + progreso real en Solana. Únete a la #StonksCoinArmy." />
-<title>StonksCoin | Official Site</title>
+<title>$STONKS | StonksCoin on Solana</title>
+<meta name="description" content="$STONKS — community-driven meme coin on Solana. Zero tax, transparent treasury. Join the #StonksCoinArmy." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
 <style>
 :root{
---bg1:#0b1a2a; --bg2:#0f2942;
---card:#12283a; --text:#f4f6fb; --muted:#a8b3c7; --accent:#f6b544;
---btn:#1b3a57; --btnText:#e9f0fb; --btnHover:#244c71;
+--bg1:#000; --bg2:#0a0a0a;
+--text:#f3f3f3; --muted:#bfc6d2;
+--card:rgba(255,255,255,.06); --border:rgba(255,255,255,.12);
+--accent:#ffcc00; --accent-2:#ffd633; --accent-3:#ffb700;
 }
 *{box-sizing:border-box}
+html,body{height:100%}
 body{
-margin:0; font-family: "Segoe UI", Arial, sans-serif; color:var(--text);
-background: radial-gradient(1200px 600px at 50% -10%, #16324a, transparent 60%),
-linear-gradient(180deg, var(--bg1), var(--bg2));
-min-height:100vh;
+margin:0; color:var(--text);
+font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;
+background:
+radial-gradient(1200px 600px at 15% -10%, rgba(255,255,255,.06), transparent 60%),
+radial-gradient(900px 500px at 120% 0%, rgba(255,255,255,.05), transparent 55%),
+linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
 }
-.wrap{max-width:980px; margin:0 auto; padding:32px 20px 80px; position:relative}
-header{padding:18px 0 10px; text-align:center}
-.mark{
-display:inline-flex; align-items:center; justify-content:center;
-width:54px; height:54px; border-radius:14px; background:var(--accent);
-color:#1b1b1b; font-weight:700; margin:0 auto 14px;
-box-shadow:0 8px 30px rgba(246,181,68,.25)
-}
-h1{font-size:44px; line-height:1.12; margin:8px 0 10px}
-h1 .brand{white-space:nowrap}
-.subtitle{
-text-align:center; color:var(--muted); margin:8px 0 26px; font-size:15.5px
-}
-.card{
-background:rgba(18,40,58,.75); backdrop-filter: blur(6px);
-border:1px solid rgba(255,255,255,.06);
-border-radius:18px; padding:22px 22px 18px; margin:0 auto 22px
-}
-.pill{display:inline-block; font-size:12px; color:#c6d3e6; background:#18324a;
-border:1px solid rgba(255,255,255,.08); padding:6px 10px; border-radius:999px;
-margin-bottom:10px}
-h2{font-size:24px; margin:4px 0 10px}
-ul{margin:0; padding:0 0 0 18px}
-li{margin:10px 0; color:#dbe6f6}
-.actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
-.btn{
-background:var(--btn); color:var(--btnText); text-decoration:none;
-padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.06);
-transition:.18s; font-weight:600
-}
-.btn:hover{background:var(--btnHover)}
-.btn.accent{background:var(--accent); color:#1b1b1b; border-color:#e6a535}
-.btn.accent:hover{filter:brightness(0.95)}
-/* Logo flotante a la derecha */
-.floating-logo{
-position:fixed; right:22px; top:120px;
-width:120px; height:auto; opacity:.85; border-radius:12px;
-box-shadow:0 10px 28px rgba(0,0,0,.25); pointer-events:none;
-}
-.logo-caption{
-position:fixed; right:26px; top:246px; font-size:12px; color:#c8d6ea; opacity:.9
-}
-/* Responsive */
-@media (max-width: 880px){
-h1{font-size:36px}
-.floating-logo{display:none}
-.logo-caption{display:none}
-}
+.wrap{max-width:1100px;margin:0 auto;padding:40px 20px 96px;position:relative}
+header{text-align:center;padding-top:6px}
+.chip{width:48px;height:48px;border-radius:12px;margin:6px auto 18px;
+display:grid;place-items:center;background:var(--accent);color:#000;
+font-weight:800;box-shadow:0 10px 20px rgba(255,204,0,.25)}
+h1{margin:0 0 8px;font-size:clamp(28px,4.6vw,54px);line-height:1.07;font-weight:800}
+h1 .small{display:block;font-size:clamp(24px,4vw,44px)}
+.lead{margin:12px 0 22px;color:var(--muted);font-weight:600}
+
+.topbar{display:flex;gap:10px;justify-content:flex-end;align-items:center;margin-bottom:8px}
+.lang{display:flex;gap:6px;border:1px solid var(--border);border-radius:10px;padding:2px;background:rgba(255,255,255,.05)}
+.lang button{border:0;background:transparent;color:var(--text);padding:8px 10px;border-radius:8px;font-weight:700;cursor:pointer}
+.lang button.active{background:var(--accent);color:#000}
+
+.section{padding:26px 0}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;
+padding:24px;border-inline:1px solid var(--border);backdrop-filter:blur(4px);
+box-shadow:0 10px 30px rgba(0,0,0,.35)}
+h2{margin:0 0 12px;font-size:clamp(18px,3vw,24px)}
+.muted{color:var(--muted)}
+.clean{margin:0;padding:0 0 0 18px}
+.tokenomics{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:860px){.tokenomics{grid-template-columns:1fr}}
+
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.btn{appearance:none;border:0;cursor:pointer;padding:12px 18px;border-radius:10px;font-weight:800;letter-spacing:.2px;
+background:rgba(255,255,255,.08);color:#fff;border:1px solid var(--border);text-decoration:none;display:inline-block}
+.btn:hover{background:rgba(255,255,255,.12)}
+.btn.accent{background:var(--accent);color:#000;border:0;box-shadow:0 8px 18px rgba(255,204,0,.25)}
+.btn.accent:hover{background:var(--accent-2)}
+.btn.alt{opacity:.95}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:860px){.grid2{grid-template-columns:1fr}}
+
+.how{display:grid;gap:10px}
+.step{display:flex;gap:12px;align-items:flex-start}
+.num{min-width:28px;height:28px;border-radius:8px;background:var(--accent);color:#000;
+font-weight:900;display:grid;place-items:center;margin-top:2px}
+
+/* Floating logo */
+.floating-logo{position:absolute;top:110px;right:24px;width:120px;border-radius:14px;
+border:1px solid rgba(255,255,255,.12);box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 24px rgba(255,204,0,.25) inset}
+.logo-cap{position:absolute;right:24px;top:240px;font-size:12px;color:var(--muted)}
+@media (max-width:860px){.floating-logo,.logo-cap{display:none}}
+footer{padding:28px 0 10px;text-align:center;color:var(--muted);font-size:13px}
 </style>
 </head>
 <body>
 <div class="wrap">
+
+<!-- Idioma -->
+<div class="topbar">
+<div class="lang" aria-label="Language">
+<button id="btn-es" class="active">ES</button>
+<button id="btn-en">EN</button>
+</div>
+</div>
+
+<!-- Logo flotante -->
+<img class="floating-logo" src="stonks-logo.png" alt="StonksCoin logo">
+<div class="logo-cap">StonksCoin logo</div>
+
+<!-- Hero -->
 <header>
-<div class="mark">$</div>
+<div class="chip">$</div>
 <h1>
-<span class="brand">StonksCoin</span> — La revolución del meme en Solana<br/>
-/ The Meme Revolution on Solana
+<span data-i18n="hero_1">StonksCoin — La revolución del meme en Solana</span>
+<span class="small" data-i18n="hero_2">/ The Meme Revolution on Solana</span>
 </h1>
-<p class="subtitle">Memes + progreso real en Solana. Únete a la <b>#StonksCoinArmy</b>.</p>
+<p class="lead" data-i18n="hero_lead">Memes + progreso real. Únete a la #StonksCoinArmy.</p>
+
+<div class="cta-row" style="justify-content:center">
+<a class="btn accent" href="https://t.me/StonksCoinArmy" target="_blank" rel="noopener" data-i18n="cta_join">Join the community</a>
+<a class="btn" href="#tokenomics" data-i18n="cta_tok">Tokenomics</a>
+</div>
+
+<div class="grid2" style="margin-top:18px">
+<div class="card">
+<div class="clean" style="list-style:none;padding-left:0">
+<div><b data-i18n="liqlab">Initial Liquidity</b> 🟦 <span id="liqVal">$— TBD</span></div>
+<div><b data-i18n="supply">Total Supply</b> 1,000,000,000 $STONKS</div>
+<div><b>Contract</b> <span id="contractAddr">TBA</span></div>
+</div>
+</div>
+<div class="card">
+<div style="font-weight:700;margin-bottom:6px" data-i18n="check">Launch checklist</div>
+<ul class="clean">
+<li>✅ <span data-i18n="ck1">Telegram channel + group with bot protection</span></li>
+<li>✅ <span data-i18n="ck2">Branding & logo ready</span></li>
+<li>🔜 <span data-i18n="ck3">Deploy token on Pump.fun / coinbook.fun</span></li>
+<li>🔜 <span data-i18n="ck4">Liquidity add & basic marketing</span></li>
+<li>🔜 <span data-i18n="ck5">CMC/CGK community listing</span></li>
+</ul>
+</div>
+</div>
 </header>
 
-<section class="card">
-<span class="pill">Roadmap público</span>
-<h2>De 0 a listado grande</h2>
-<ul>
-<li><b>Etapa 1:</b> Lanzamiento en Solana + comunidad (Telegram & X).</li>
-<li><b>Etapa 2:</b> Listado inicial en <b>Pump.fun</b> (visibilidad temprana).</li>
-<li><b>Etapa 3:</b> Aplicaciones a <b>CoinGecko</b> y <b>CoinMarketCap</b>.</li>
-<li><b>Etapa 4:</b> Métricas, auditorías y camino a <b>Binance</b>.</li>
-</ul>
-
-<div class="actions">
-<a class="btn accent" href="https://t.me/StonksCoinArmy" target="_blank" rel="noopener">Join Telegram</a>
-<a class="btn" href="https://x.com/StonksCoinArmy" target="_blank" rel="noopener">Follow on X</a>
-<a class="btn" href="https://www.instagram.com/stonksdev2025" target="_blank" rel="noopener">Instagram</a>
+<!-- About -->
+<section id="about" class="section">
+<div class="card">
+<h2 data-i18n="about_title">What is StonksCoin?</h2>
+<p class="muted" data-i18n="about_p1">$STONKS is a community meme coin focused on good vibes, transparency, and consistent delivery. No promises of profits — only memes, tools, and momentum.</p>
 </div>
 </section>
+
+<!-- Tokenomics + Roadmap -->
+<section id="tokenomics" class="section">
+<div class="tokenomics">
+<div class="card">
+<h2 data-i18n="tok_title">Tokenomics</h2>
+<ul class="clean">
+<li>🧊 <b data-i18n="tok_tax">Taxes:</b> 0/0</li>
+<li>💧 <b data-i18n="tok_lp">Liquidity:</b> <span data-i18n="tok_lp_text">Added & locked (tx hash to be shared)</span></li>
+<li>🪙 <b data-i18n="tok_supply">Supply:</b> 1,000,000,000 $STONKS</li>
+<li>🤝 <b data-i18n="tok_alloc">Allocation:</b> <span data-i18n="tok_alloc_text">90% public, 5% CEX/marketing, 5% treasury (multisig)</span></li>
+</ul>
+</div>
+<div class="card">
+<h2 data-i18n="road_title">Roadmap</h2>
+<ul class="clean">
+<li data-i18n="rd1">Q1 — Fair launch on Solana, socials + memes daily</li>
+<li data-i18n="rd2">Q2 — Utilities: simple bot / dashboard, community contests</li>
+<li data-i18n="rd3">Q3 — CMC/CGK listings, tier-2 CEX outreach</li>
+<li data-i18n="rd4">Q4 — Partnerships, merch, seasonal campaigns</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- How to buy -->
+<section id="how" class="section">
+<div class="card">
+<h2 data-i18n="how_title">How to buy $STONKS (Solana)</h2>
+<div class="how">
+<div class="step"><div class="num">1</div><div data-i18n="how_1">Create a Solana wallet (Phantom) & fund with SOL.</div></div>
+<div class="step"><div class="num">2</div><div data-i18n="how_2">Open Pump.fun or Raydium swap and paste our contract address.</div></div>
+<div class="step"><div class="num">3</div><div data-i18n="how_3">Set slippage if needed, confirm the swap, and HODL.</div></div>
+</div>
+<div class="cta-row" style="margin-top:14px">
+<a class="btn accent" href="#" id="buyLink" data-i18n="how_cta">Open swap</a>
+<a class="btn alt" href="https://t.me/StonksCoinArmy" target="_blank" rel="noopener" data-i18n="how_needhelp">Need help? Ask in Telegram</a>
+</div>
+</div>
+</section>
+
+<!-- Socials -->
+<section id="socials" class="section">
+<div class="card">
+<h2 data-i18n="soc_title">Community</h2>
+<p class="muted" data-i18n="soc_p">Follow our socials and join the conversation.</p>
+<div class="cta-row">
+<a class="btn accent" href="https://t.me/StonksCoinArmy" target="_blank" rel="noopener">Telegram</a>
+<a class="btn" href="https://x.com/StonksCoinArmy" target="_blank" rel="noopener">X (Twitter)</a>
+<a class="btn alt" href="https://www.instagram.com/stonksdev2025" target="_blank" rel="noopener">Instagram</a>
+<a class="btn alt" href="#" id="dexLink" target="_blank" rel="noopener">Dexscreener</a>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+<div class="card">
+<h2>FAQ</h2>
+<ul class="clean">
+<li><b data-i18n="faq1_q">Is this financial advice?</b><br><span class="muted" data-i18n="faq1_a">No. $STONKS is a community meme coin. Crypto is risky — do your own research.</span></li>
+<li><b data-i18n="faq2_q">When CEX?</b><br><span class="muted" data-i18n="faq2_a">We will apply to aggregators first (CMC/CGK) and scale responsibly.</span></li>
+</ul>
+</div>
+</section>
+
+<footer>
+<div class="muted" data-i18n="disc">Disclaimer: $STONKS is a meme coin with no intrinsic value or expectation of financial return. By interacting you agree to the community rules and to follow your local laws.</div>
+</footer>
 </div>
 
-<!-- Logo a la derecha (usa la URL RAW para evitar 404) -->
-<img
-class="floating-logo"
-src="https://raw.githubusercontent.com/StonksDev-Sol/stonkscoin-site/main/stonks-logo.png"
-alt="StonksCoin logo" />
-<div class="logo-caption">StonksCoin logo</div>
+<!-- i18n + helpers -->
+<script>
+const STR = {
+es:{
+hero_1:"StonksCoin — La revolución del meme en Solana",
+hero_2:"/ The Meme Revolution on Solana",
+hero_lead:"Memes + progreso real. Únete a la #StonksCoinArmy.",
+cta_join:"Únete a la comunidad", cta_tok:"Tokenomics",
+liqlab:"Liquidez inicial", supply:"Suministro total",
+check:"Checklist de lanzamiento",
+ck1:"Canal y grupo en Telegram con protección de bots",
+ck2:"Branding y logo listos",
+ck3:"Despliegue del token en Pump.fun / coinbook.fun",
+ck4:"Agregar liquidez + marketing básico",
+ck5:"Listado comunitario en CMC/CGK",
+about_title:"¿Qué es StonksCoin?",
+about_p1:"$STONKS es un meme coin comunitario enfocado en buenas vibras, transparencia y entregas constantes. Sin promesas de ganancias: solo memes, herramientas y momentum.",
+tok_title:"Tokenomics",
+tok_tax:"Impuestos:",
+tok_lp:"Liquidez:",
+tok_lp_text:"Agregada y bloqueada (se compartirá el hash)",
+tok_supply:"Suministro:",
+tok_alloc:"Asignación:",
+tok_alloc_text:"90% público, 5% CEX/marketing, 5% tesorería (multisig)",
+road_title:"Roadmap",
+rd1:"Q1 — Fair launch en Solana, redes + memes diarios",
+rd2:"Q2 — Utilidades: bot simple / dashboard, concursos",
+rd3:"Q3 — Listados en CMC/CGK, alcance a CEX tier-2",
+rd4:"Q4 — Alianzas, merch, campañas de temporada",
+how_title:"Cómo comprar $STONKS (Solana)",
+how_1:"Crea una wallet Solana (Phantom) y fondea con SOL.",
+how_2:"Abre Pump.fun o Raydium y pega nuestro contrato.",
+how_3:"Ajusta slippage si hace falta, confirma y HODL.",
+how_cta:"Abrir swap",
+how_needhelp:"¿Dudas? Pregunta en Telegram",
+soc_title:"Comunidad",
+soc_p:"Sigue nuestras redes y únete a la conversación.",
+faq1_q:"¿Esto es consejo financiero?",
+faq1_a:"No. $STONKS es un meme coin comunitario. Cripto es riesgoso: haz tu propia investigación.",
+faq2_q:"¿Cuándo CEX?",
+faq2_a:"Primero aplicaremos a agregadores (CMC/CGK) y escalaremos responsablemente.",
+disc:"Aviso: $STONKS es un meme coin sin valor intrínseco ni expectativa de retorno financiero. Al interactuar aceptas las reglas de la comunidad y cumplir tus leyes locales."
+},
+en:{
+hero_1:"StonksCoin — The meme revolution on Solana",
+hero_2:"/ The Meme Revolution on Solana",
+hero_lead:"Memes + real progress. Join the #StonksCoinArmy.",
+cta_join:"Join the community", cta_tok:"Tokenomics",
+liqlab:"Initial Liquidity", supply:"Total Supply",
+check:"Launch checklist",
+ck1:"Telegram channel + group with bot protection",
+ck2:"Branding & logo ready",
+ck3:"Deploy token on Pump.fun / coinbook.fun",
+ck4:"Liquidity add & basic marketing",
+ck5:"CMC/CGK community listing",
+about_title:"What is StonksCoin?",
+about_p1:"$STONKS is a community meme coin focused on good vibes, transparency, and consistent delivery. No promises of profits — only memes, tools, and momentum.",
+tok_title:"Tokenomics",
+tok_tax:"Taxes:",
+tok_lp:"Liquidity:",
+tok_lp_text:"Added & locked (tx hash to be shared)",
+tok_supply:"Supply:",
+tok_alloc:"Allocation:",
+tok_alloc_text:"90% public, 5% CEX/marketing, 5% treasury (multisig)",
+road_title:"Roadmap",
+rd1:"Q1 — Fair launch on Solana, socials + memes daily",
+rd2:"Q2 — Utilities: simple bot / dashboard, community contests",
+rd3:"Q3 — CMC/CGK listings, tier-2 CEX outreach",
+rd4:"Q4 — Partnerships, merch, seasonal campaigns",
+how_title:"How to buy $STONKS (Solana)",
+how_1:"Create a Solana wallet (Phantom) & fund with SOL.",
+how_2:"Open Pump.fun or Raydium swap and paste our contract address.",
+how_3:"Set slippage if needed, confirm the swap, and HODL.",
+how_cta:"Open swap",
+how_needhelp:"Need help? Ask in Telegram",
+soc_title:"Community",
+soc_p:"Follow our socials and join the conversation.",
+faq1_q:"Is this financial advice?",
+faq1_a:"No. $STONKS is a community meme coin. Crypto is risky — do your own research.",
+faq2_q:"When CEX?",
+faq2_a:"We will apply to aggregators first (CMC/CGK) and scale responsibly.",
+disc:"Disclaimer: $STONKS is a meme coin with no intrinsic value or expectation of financial return. By interacting you agree to the community rules and to follow your local laws."
+}
+};
 
+// Simple i18n
+const $ = s => document.querySelectorAll(`[data-i18n="${s}"]`);
+function setLang(code){
+const dict = STR[code];
+document.querySelectorAll('[data-i18n]').forEach(el=>{
+const key = el.getAttribute('data-i18n');
+if(dict[key]!==undefined) el.textContent = dict[key];
+});
+document.getElementById('btn-es').classList.toggle('active', code==='es');
+document.getElementById('btn-en').classList.toggle('active', code==='en');
+localStorage.setItem('lang', code);
+}
+document.getElementById('btn-es').onclick=()=>setLang('es');
+document.getElementById('btn-en').onclick=()=>setLang('en');
+setLang(localStorage.getItem('lang')||'es');
+
+// —— TODO: cuando tengas contrato y dex, actualiza esto ——
+const CONTRACT = ""; // ej: "So1111...abcd"
+const RAYDIUM_SWAP = ""; // link Raydium con el mint address
+const DEXSCREENER = ""; // link de Dexscreener del par
+
+// Buy / Dex links
+const buyA = document.getElementById('buyLink');
+const dexA = document.getElementById('dexLink');
+if(CONTRACT && RAYDIUM_SWAP){ buyA.href = RAYDIUM_SWAP; buyA.target = "_blank"; }
+if(DEXSCREENER){ dexA.href = DEXSCREENER; } else { dexA.removeAttribute('href'); }
+// Muestra contrato si existe
+if(CONTRACT) document.getElementById('contractAddr').textContent = CONTRACT;
+</script>
 </body>
 </html>
