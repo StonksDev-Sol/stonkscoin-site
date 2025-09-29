@@ -1,173 +1,107 @@
 <!DOCTYPE html><html lang="es">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1" />
-<meta name="description" content="Sitio oficial del proyecto StonksCoin — memes + progreso real en Solana. Roadmap de Pump.fun a CoinGecko, CoinMarketCap y Binance." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Sitio oficial del proyecto StonksCoin — memes + progreso real en Solana. Únete a la #StonksCoinArmy." />
 <title>StonksCoin | Official Site</title>
-
 <style>
 :root{
---bg1:#0e0e10;
---bg2:#15161a;
---card:#1c1e24;
---text:#f4f4f4;
---muted:#b9bcc6;
---accent:#ffd54a; /* dorado bullish */
---accent-2:#ff8a00;
+--bg1:#0b1a2a; --bg2:#0f2942;
+--card:#12283a; --text:#f4f6fb; --muted:#a8b3c7; --accent:#f6b544;
+--btn:#1b3a57; --btnText:#e9f0fb; --btnHover:#244c71;
 }
-
-/* ====== Base ====== */
-html,body{
-margin:0; padding:0;
-background: radial-gradient(1200px 700px at 20% 0%, #0f1222, #0b0c10 55%), linear-gradient(180deg, var(--bg1), var(--bg2));
-color:var(--text); font-family: "Segoe UI", Arial, sans-serif;
-min-height:100%;
+*{box-sizing:border-box}
+body{
+margin:0; font-family: "Segoe UI", Arial, sans-serif; color:var(--text);
+background: radial-gradient(1200px 600px at 50% -10%, #16324a, transparent 60%),
+linear-gradient(180deg, var(--bg1), var(--bg2));
+min-height:100vh;
 }
-
-.wrap{
-max-width:1100px; margin:0 auto; padding:4.5rem 1.25rem 6rem;
-position:relative;
+.wrap{max-width:980px; margin:0 auto; padding:32px 20px 80px; position:relative}
+header{padding:18px 0 10px; text-align:center}
+.mark{
+display:inline-flex; align-items:center; justify-content:center;
+width:54px; height:54px; border-radius:14px; background:var(--accent);
+color:#1b1b1b; font-weight:700; margin:0 auto 14px;
+box-shadow:0 8px 30px rgba(246,181,68,.25)
 }
-
-/* ====== Hero ====== */
-.badge{
-width:56px; height:56px; border-radius:14px;
-display:grid; place-items:center; font-weight:700;
-background: linear-gradient(160deg, var(--accent), var(--accent-2));
-color:#1b1b1b; box-shadow:0 8px 24px rgba(255,173,0,.35);
-margin:0 auto 1.25rem;
-animation: pop-in .6s ease-out both;
+h1{font-size:44px; line-height:1.12; margin:8px 0 10px}
+h1 .brand{white-space:nowrap}
+.subtitle{
+text-align:center; color:var(--muted); margin:8px 0 26px; font-size:15.5px
 }
-@keyframes pop-in{ from{transform: scale(.8); opacity:0} to{transform:scale(1); opacity:1}}
-
-h1{
-text-align:center; line-height:1.22; margin:0 0 .5rem;
-font-size: clamp(1.8rem, 3.5vw, 3rem);
-font-weight:800; letter-spacing:.2px;
-}
-.tagline{
-text-align:center; color:var(--muted); margin:.25rem 0 2.25rem; font-size:clamp(.95rem, 1.6vw, 1.05rem);
-}
-
-/* ====== Card / Roadmap ====== */
 .card{
-background: linear-gradient(180deg, #171922, #15161a);
+background:rgba(18,40,58,.75); backdrop-filter: blur(6px);
 border:1px solid rgba(255,255,255,.06);
-border-radius:18px; padding:1.15rem; max-width:720px;
-box-shadow: 0 8px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
-margin:0 auto 1.25rem;
-animation: fade-in .8s ease-out .2s both;
+border-radius:18px; padding:22px 22px 18px; margin:0 auto 22px
 }
-.card h3{margin:.25rem 0 1rem; font-size:1.25rem}
-.pill{
-display:inline-block; padding:.35rem .6rem; font-size:.8rem; border-radius:999px;
-background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); color:#d6d9e2;
-margin-bottom:.4rem;
-}
-ul{
-margin:.4rem 0 0 1rem; padding:0; list-style: none;
-}
-ul li{
-margin:.55rem 0; color:#e9ecf7; line-height:1.4;
-position:relative; padding-left:1.1rem;
-}
-ul li::before{
-content:"•"; position:absolute; left:0; color:var(--accent);
-}
-
-/* ====== CTA Buttons ====== */
-.btns{ display:flex; gap:.7rem; flex-wrap:wrap; justify-content:center; margin-top:1rem}
+.pill{display:inline-block; font-size:12px; color:#c6d3e6; background:#18324a;
+border:1px solid rgba(255,255,255,.08); padding:6px 10px; border-radius:999px;
+margin-bottom:10px}
+h2{font-size:24px; margin:4px 0 10px}
+ul{margin:0; padding:0 0 0 18px}
+li{margin:10px 0; color:#dbe6f6}
+.actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
 .btn{
-border:none; border-radius:12px; padding:.75rem 1rem; font-weight:600; cursor:pointer;
-color:#0d0e12; background: var(--accent);
-transition: transform .15s ease, filter .15s ease, box-shadow .15s ease;
-box-shadow:0 10px 18px rgba(255,213,74,.25);
-text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;
+background:var(--btn); color:var(--btnText); text-decoration:none;
+padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.06);
+transition:.18s; font-weight:600
 }
-.btn:hover{ transform: translateY(-2px); filter:saturate(1.08); }
-.btn.x { background:#0f1419; color:#e6e6e6; border:1px solid rgba(255,255,255,.1) }
-.btn.x:hover{ box-shadow:0 10px 18px rgba(255,255,255,.07) }
-.btn.ig{ background:#ea4c89; color:#fff }
-.btn.ig:hover{ box-shadow:0 10px 18px rgba(234,76,137,.35) }
-
-/* ====== Floating Logo (derecha) ====== */
+.btn:hover{background:var(--btnHover)}
+.btn.accent{background:var(--accent); color:#1b1b1b; border-color:#e6a535}
+.btn.accent:hover{filter:brightness(0.95)}
+/* Logo flotante a la derecha */
 .floating-logo{
-position: fixed;
-right: min(3vw, 28px);
-top: 50%;
-transform: translateY(-50%);
-width: clamp(84px, 16vw, 200px);
-height: auto;
-border-radius: 20px;
-box-shadow: 0 12px 34px rgba(255, 173, 0, .18);
-opacity: 0;
-animation: logo-in .9s ease-out .25s both; /* fade + slide in */
-transition: transform .2s ease, box-shadow .2s ease, filter .2s ease, border-radius .2s ease;
-z-index: 10;
-pointer-events: none; /* solo decorativo; quita esto si quieres que sea clickeable */
+position:fixed; right:22px; top:120px;
+width:120px; height:auto; opacity:.85; border-radius:12px;
+box-shadow:0 10px 28px rgba(0,0,0,.25); pointer-events:none;
 }
-@keyframes logo-in{
-from{ opacity:0; transform: translate(30px, -50%) scale(.92) }
-to{ opacity:1; transform: translate(0, -50%) scale(1) }
+.logo-caption{
+position:fixed; right:26px; top:246px; font-size:12px; color:#c8d6ea; opacity:.9
 }
-/* Hover glow */
-.floating-logo:hover{
-transform: translateY(-50%) scale(1.1);
-box-shadow: 0 0 20px rgba(255,215,0,.8), 0 0 40px rgba(255,215,0,.5);
-border-radius: 50%;
-filter: saturate(1.08);
-}
-
-/* ====== Utils ====== */
-@keyframes fade-in{ from{opacity:0; transform: translateY(6px)} to{opacity:1; transform:none}}
-
-/* ====== Responsive ====== */
-@media (max-width: 900px){
-.floating-logo{ display:none } /* oculta el logo flotante en móviles para no tapar contenido */
-.wrap{ padding-top: 3.2rem }
+/* Responsive */
+@media (max-width: 880px){
+h1{font-size:36px}
+.floating-logo{display:none}
+.logo-caption{display:none}
 }
 </style>
 </head>
 <body>
 <div class="wrap">
-
-<!-- insignia (pequeño cuadrado dorado con $) -->
-<div class="badge">$</div>
-
-<!-- Título bilingüe -->
+<header>
+<div class="mark">$</div>
 <h1>
-<span>StonksCoin — La revolución del meme en Solana</span><br/>
-<span style="opacity:.9">/ The Meme Revolution on Solana</span>
+<span class="brand">StonksCoin</span> — La revolución del meme en Solana<br/>
+/ The Meme Revolution on Solana
 </h1>
+<p class="subtitle">Memes + progreso real en Solana. Únete a la <b>#StonksCoinArmy</b>.</p>
+</header>
 
-<!-- Tagline -->
-<p class="tagline">Memes + progreso real en Solana. Únete a la <strong>#StonksCoinArmy</strong>.</p>
-
-<!-- Roadmap -->
-<div class="card">
+<section class="card">
 <span class="pill">Roadmap público</span>
-<h3>De 0 a listado grande</h3>
+<h2>De 0 a listado grande</h2>
 <ul>
-<li><strong>Etapa 1:</strong> Lanzamiento en Solana + comunidad (Telegram &amp; X).</li>
-<li><strong>Etapa 2:</strong> Listado inicial en <strong>Pump.fun</strong> (visibilidad temprana).</li>
-<li><strong>Etapa 3:</strong> Aplicaciones a <strong>CoinGecko</strong> y <strong>CoinMarketCap</strong>.</li>
-<li><strong>Etapa 4:</strong> Métricas, auditorías y camino a <strong>Binance</strong>.</li>
+<li><b>Etapa 1:</b> Lanzamiento en Solana + comunidad (Telegram & X).</li>
+<li><b>Etapa 2:</b> Listado inicial en <b>Pump.fun</b> (visibilidad temprana).</li>
+<li><b>Etapa 3:</b> Aplicaciones a <b>CoinGecko</b> y <b>CoinMarketCap</b>.</li>
+<li><b>Etapa 4:</b> Métricas, auditorías y camino a <b>Binance</b>.</li>
 </ul>
 
-<!-- Botones -->
-<div class="btns">
-<a class="btn" href="https://t.me/StonksCoinArmy" target="_blank" rel="noopener">Join Telegram</a>
-<a class="btn x" href="https://x.com/StonksCoinArmy" target="_blank" rel="noopener">Follow on X</a>
-<a class="btn ig" href="https://www.instagram.com/stonksdev2025" target="_blank" rel="noopener">Instagram</a>
+<div class="actions">
+<a class="btn accent" href="https://t.me/StonksCoinArmy" target="_blank" rel="noopener">Join Telegram</a>
+<a class="btn" href="https://x.com/StonksCoinArmy" target="_blank" rel="noopener">Follow on X</a>
+<a class="btn" href="https://www.instagram.com/stonksdev2025" target="_blank" rel="noopener">Instagram</a>
 </div>
-</div>
-
+</section>
 </div>
 
-<!-- ===== Logo flotante a la derecha =====
-Sube tu imagen como stonks-logo.png a la raíz del repo.
-Si usas otro nombre o carpeta, cambia el src de abajo. -->
-<img class="floating-logo" src="stonks-logo.png" alt="StonksCoin logo" />
+<!-- Logo a la derecha (usa la URL RAW para evitar 404) -->
+<img
+class="floating-logo"
+src="https://raw.githubusercontent.com/StonksDev-Sol/stonkscoin-site/main/stonks-logo.png"
+alt="StonksCoin logo" />
+<div class="logo-caption">StonksCoin logo</div>
 
 </body>
 </html>
