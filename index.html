@@ -1,136 +1,173 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>La revolución del meme en Solana | The Meme Revolution on Solana — StonksCoin</title>
-
-<meta name="description" content="StonksCoin ($STONKS) — Memes + progreso real en Solana. Camino: Poop.Fan → CoinGecko → CoinMarketCap → Binance. Únete a la #StonksCoinArmy." />
-<meta property="og:title" content="StonksCoin — La revolución del meme en Solana" />
-<meta property="og:description" content="Memes + progreso real en Solana. Camino: Poop.Fan → CoinGecko → CoinMarketCap → Binance." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://stonksdev-sol.github.io/stonkscoin-site/" />
-<!-- Si subes el logo/imagen, esta línea mostrará vista previa -->
-<meta property="og:image" content="assets/stonks-hero.jpg" />
+<meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1" />
+<meta name="description" content="Sitio oficial del proyecto StonksCoin — memes + progreso real en Solana. Roadmap de Pump.fun a CoinGecko, CoinMarketCap y Binance." />
+<title>StonksCoin | Official Site</title>
 
 <style>
 :root{
---bg:#0e0e10;
---card:#15151a;
+--bg1:#0e0e10;
+--bg2:#15161a;
+--card:#1c1e24;
 --text:#f4f4f4;
---muted:#b7b7c3;
---accent:#f5a623; /* dorado/ámbar */
---accent-2:#ffd56b;
+--muted:#b9bcc6;
+--accent:#ffd54a; /* dorado bullish */
+--accent-2:#ff8a00;
 }
-*{box-sizing:border-box}
-body{
-margin:0; font-family: "Segoe UI", Arial, sans-serif;
-background: var(--bg); color: var(--text);
+
+/* ====== Base ====== */
+html,body{
+margin:0; padding:0;
+background: radial-gradient(1200px 700px at 20% 0%, #0f1222, #0b0c10 55%), linear-gradient(180deg, var(--bg1), var(--bg2));
+color:var(--text); font-family: "Segoe UI", Arial, sans-serif;
+min-height:100%;
 }
-header{
-padding: 2.5rem 1.25rem; text-align:center;
-background: linear-gradient(180deg, rgba(245,166,35,0.12), transparent 65%);
-border-bottom: 1px solid #1f1f25;
+
+.wrap{
+max-width:1100px; margin:0 auto; padding:4.5rem 1.25rem 6rem;
+position:relative;
 }
-.logo{
-width:92px; height:92px; border-radius:20px;
-background: radial-gradient(circle at 30% 30%, var(--accent-2), var(--accent));
-display:inline-flex; align-items:center; justify-content:center;
-color:#111; font-weight:800; letter-spacing:.5px; box-shadow: 0 8px 24px rgba(245,166,35,.25)
+
+/* ====== Hero ====== */
+.badge{
+width:56px; height:56px; border-radius:14px;
+display:grid; place-items:center; font-weight:700;
+background: linear-gradient(160deg, var(--accent), var(--accent-2));
+color:#1b1b1b; box-shadow:0 8px 24px rgba(255,173,0,.35);
+margin:0 auto 1.25rem;
+animation: pop-in .6s ease-out both;
 }
-.title{
-font-size: clamp(1.6rem, 2.2vw + 1rem, 2.35rem);
-margin: 1rem 0 .25rem; font-weight:800;
+@keyframes pop-in{ from{transform: scale(.8); opacity:0} to{transform:scale(1); opacity:1}}
+
+h1{
+text-align:center; line-height:1.22; margin:0 0 .5rem;
+font-size: clamp(1.8rem, 3.5vw, 3rem);
+font-weight:800; letter-spacing:.2px;
 }
-.subtitle{
-margin:0; color:var(--muted); font-size: .98rem;
+.tagline{
+text-align:center; color:var(--muted); margin:.25rem 0 2.25rem; font-size:clamp(.95rem, 1.6vw, 1.05rem);
 }
-main{max-width:1100px; margin: 2rem auto; padding: 0 1rem;}
-.hero{
-display:grid; gap:1.2rem; align-items:center;
-grid-template-columns: 1.1fr .9fr;
-}
-.hero img{
-width:100%; border-radius:18px; display:block;
-border:1px solid #23232b; background:#0a0a0d;
-box-shadow: 0 10px 26px rgba(0,0,0,.35);
-}
+
+/* ====== Card / Roadmap ====== */
 .card{
-background: var(--card); border:1px solid #23232b; border-radius:16px; padding:1.25rem;
+background: linear-gradient(180deg, #171922, #15161a);
+border:1px solid rgba(255,255,255,.06);
+border-radius:18px; padding:1.15rem; max-width:720px;
+box-shadow: 0 8px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
+margin:0 auto 1.25rem;
+animation: fade-in .8s ease-out .2s both;
 }
+.card h3{margin:.25rem 0 1rem; font-size:1.25rem}
 .pill{
-display:inline-block; padding:.35rem .7rem; border-radius:999px;
-background: #1d1d22; border:1px solid #2a2a31; color:var(--muted); font-size:.8rem;
+display:inline-block; padding:.35rem .6rem; font-size:.8rem; border-radius:999px;
+background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); color:#d6d9e2;
+margin-bottom:.4rem;
 }
-.steps{margin:.75rem 0 1rem; padding-left:1.1rem}
-.steps li{margin:.4rem 0}
-.btns{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1rem}
+ul{
+margin:.4rem 0 0 1rem; padding:0; list-style: none;
+}
+ul li{
+margin:.55rem 0; color:#e9ecf7; line-height:1.4;
+position:relative; padding-left:1.1rem;
+}
+ul li::before{
+content:"•"; position:absolute; left:0; color:var(--accent);
+}
+
+/* ====== CTA Buttons ====== */
+.btns{ display:flex; gap:.7rem; flex-wrap:wrap; justify-content:center; margin-top:1rem}
 .btn{
-text-decoration:none; font-weight:700; letter-spacing:.2px;
-padding:.8rem 1rem; border-radius:10px; border:1px solid #23232b;
-background:#191920; color:var(--text); display:inline-flex; align-items:center; gap:.5rem;
-transition:.2s transform, .2s filter;
+border:none; border-radius:12px; padding:.75rem 1rem; font-weight:600; cursor:pointer;
+color:#0d0e12; background: var(--accent);
+transition: transform .15s ease, filter .15s ease, box-shadow .15s ease;
+box-shadow:0 10px 18px rgba(255,213,74,.25);
+text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;
 }
-.btn:hover{transform:translateY(-2px); filter:brightness(1.06)}
-.btn.primary{background: linear-gradient(90deg, var(--accent), var(--accent-2)); color:#151515; border:none}
-.grid{display:grid; gap:1rem; grid-template-columns: repeat(3, 1fr); margin-top:1.25rem}
-.footer{
-text-align:center; color:var(--muted); font-size:.85rem; padding:2rem 1rem; border-top:1px solid #1f1f25; margin-top:2.5rem
+.btn:hover{ transform: translateY(-2px); filter:saturate(1.08); }
+.btn.x { background:#0f1419; color:#e6e6e6; border:1px solid rgba(255,255,255,.1) }
+.btn.x:hover{ box-shadow:0 10px 18px rgba(255,255,255,.07) }
+.btn.ig{ background:#ea4c89; color:#fff }
+.btn.ig:hover{ box-shadow:0 10px 18px rgba(234,76,137,.35) }
+
+/* ====== Floating Logo (derecha) ====== */
+.floating-logo{
+position: fixed;
+right: min(3vw, 28px);
+top: 50%;
+transform: translateY(-50%);
+width: clamp(84px, 16vw, 200px);
+height: auto;
+border-radius: 20px;
+box-shadow: 0 12px 34px rgba(255, 173, 0, .18);
+opacity: 0;
+animation: logo-in .9s ease-out .25s both; /* fade + slide in */
+transition: transform .2s ease, box-shadow .2s ease, filter .2s ease, border-radius .2s ease;
+z-index: 10;
+pointer-events: none; /* solo decorativo; quita esto si quieres que sea clickeable */
 }
-@media (max-width: 920px){
-.hero{grid-template-columns: 1fr; }
+@keyframes logo-in{
+from{ opacity:0; transform: translate(30px, -50%) scale(.92) }
+to{ opacity:1; transform: translate(0, -50%) scale(1) }
+}
+/* Hover glow */
+.floating-logo:hover{
+transform: translateY(-50%) scale(1.1);
+box-shadow: 0 0 20px rgba(255,215,0,.8), 0 0 40px rgba(255,215,0,.5);
+border-radius: 50%;
+filter: saturate(1.08);
+}
+
+/* ====== Utils ====== */
+@keyframes fade-in{ from{opacity:0; transform: translateY(6px)} to{opacity:1; transform:none}}
+
+/* ====== Responsive ====== */
+@media (max-width: 900px){
+.floating-logo{ display:none } /* oculta el logo flotante en móviles para no tapar contenido */
+.wrap{ padding-top: 3.2rem }
 }
 </style>
 </head>
 <body>
-<header>
-<div class="logo">$</div>
-<h1 class="title">StonksCoin — La revolución del meme en Solana / The Meme Revolution on Solana</h1>
-<p class="subtitle">Memes + progreso real en Solana. Únete a la <b>#StonksCoinArmy</b>.</p>
-</header>
+<div class="wrap">
 
-<main>
-<section class="hero">
+<!-- insignia (pequeño cuadrado dorado con $) -->
+<div class="badge">$</div>
+
+<!-- Título bilingüe -->
+<h1>
+<span>StonksCoin — La revolución del meme en Solana</span><br/>
+<span style="opacity:.9">/ The Meme Revolution on Solana</span>
+</h1>
+
+<!-- Tagline -->
+<p class="tagline">Memes + progreso real en Solana. Únete a la <strong>#StonksCoinArmy</strong>.</p>
+
+<!-- Roadmap -->
 <div class="card">
 <span class="pill">Roadmap público</span>
-<h2 style="margin:.6rem 0 0">De 0 a listado grande</h2>
-<ul class="steps">
-<li><b>Etapa 1:</b> Lanzamiento en Solana + comunidad (Telegram &amp; X).</li>
-<li><b>Etapa 2:</b> Listado inicial en <b>Pump.Fun</b> (visibilidad temprana).</li>
-<li><b>Etapa 3:</b> Aplicaciones a <b>CoinGecko</b> y <b>CoinMarketCap</b>.</li>
-<li><b>Etapa 4:</b> Métricas, auditorías y camino a <b>Binance</b>.</li>
+<h3>De 0 a listado grande</h3>
+<ul>
+<li><strong>Etapa 1:</strong> Lanzamiento en Solana + comunidad (Telegram &amp; X).</li>
+<li><strong>Etapa 2:</strong> Listado inicial en <strong>Pump.fun</strong> (visibilidad temprana).</li>
+<li><strong>Etapa 3:</strong> Aplicaciones a <strong>CoinGecko</strong> y <strong>CoinMarketCap</strong>.</li>
+<li><strong>Etapa 4:</strong> Métricas, auditorías y camino a <strong>Binance</strong>.</li>
 </ul>
 
+<!-- Botones -->
 <div class="btns">
-<a class="btn primary" href="https://t.me/StonksCoinArmy" target="_blank" rel="noopener">Join Telegram</a>
-<a class="btn" href="https://x.com/StonksCoinArmy" target="_blank" rel="noopener">Follow on X</a>
-<a class="btn" href="https://www.instagram.com/stonksdev2025" target="_blank" rel="noopener">Instagram</a>
+<a class="btn" href="https://t.me/StonksCoinArmy" target="_blank" rel="noopener">Join Telegram</a>
+<a class="btn x" href="https://x.com/StonksCoinArmy" target="_blank" rel="noopener">Follow on X</a>
+<a class="btn ig" href="https://www.instagram.com/stonksdev2025" target="_blank" rel="noopener">Instagram</a>
 </div>
 </div>
 
-<!-- Si subes el archivo assets/stonks-hero.jpg al repo, se mostrará aquí -->
-<img src="assets/stonks-hero.jpg" alt="StonksCoin hero" onerror="this.style.display='none'">
-</section>
+</div>
 
-<section class="grid">
-<div class="card">
-<h3>$STONKS</h3>
-<p>Token meme con utilidades en comunidad, contenido y micro-recompensas. Construido en <b>Solana</b> para fees bajos y alta velocidad.</p>
-</div>
-<div class="card">
-<h3>Transparencia</h3>
-<p>Comunidad primero: actualizaciones abiertas, auditoría planeada y comunicación 24/7 en Telegram y X.</p>
-</div>
-<div class="card">
-<h3>Próximo</h3>
-<p>Contrato en Solana, formulario de CG/CMC y primeras integraciones. Mantente atento al canal.</p>
-</div>
-</section>
-</main>
+<!-- ===== Logo flotante a la derecha =====
+Sube tu imagen como stonks-logo.png a la raíz del repo.
+Si usas otro nombre o carpeta, cambia el src de abajo. -->
+<img class="floating-logo" src="stonks-logo.png" alt="StonksCoin logo" />
 
-<footer class="footer">
-© <span id="y"></span> StonksCoin — All rights reserved. • Built on Solana
-</footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
